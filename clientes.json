@@ -1,0 +1,47 @@
+[
+    {
+        "numerocliente":1,
+        "nomecliente":"João Santos",
+        "nif":111111111,
+        "morada":"Rua dos Santos nº1",
+        "codigopostal":"1000-100 Lisboa",
+        "telefone":"211 111 111",
+        "email":"joao.santos@sapo.pt"
+    },
+    {
+        "numerocliente":2,
+        "nomecliente":"Rita Alves",
+        "nif":222222222,
+        "morada":"Rua dos Alves nº1",
+        "codigopostal":"2000-200 Lisboa",
+        "telefone":"222 222 222",
+        "email":"rita.alves@sapo.pt"
+    },
+    {
+        "numerocliente":3,
+        "nomecliente":"Joana Neves",
+        "nif":333333333,
+        "morada":"Rua das Neves nº1",
+        "codigopostal":"3000-300 Coimbra",
+        "telefone":"233 333 333",
+        "email":"joana.neves@outlook.pt"
+    },
+    {
+        "numerocliente":4,
+        "nomecliente":"Rodrigo Tavares",
+        "nif":444444444,
+        "morada":"Rua dos Tavares nº1",
+        "codigopostal":"4000-400 Porto",
+        "telefone":"244 444 444",
+        "email":"rodrigo.tavares@gmail.com"
+    },
+    {
+        "numerocliente":5,
+        "nomecliente":"Sofia Silva",
+        "nif":555555555,
+        "morada":"Rua dos Silvas nº1",
+        "codigopostal":"5000-500 Guimarães",
+        "telefone":"244 444 444",
+        "email":"sofia.silva@outlook.com"
+    }
+]

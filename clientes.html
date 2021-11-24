@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link Jquery -->
+    <script src="jquery/jquery-3.6.0.js"></script>
+    <!-- link CSS -->
+    <link rel="stylesheet" href="/css/clientes.css">
+    <!-- link JS -->
+    <script src="js/clientes.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="tableContainer">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nº Cliente</th>
+                    <th>Nome</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <button type="button" onclick="adicionar();">Adicionar</button>
+    </div>
+    <div id="formArea">
+        <div id="formContainer">
+            <form>
+                <label for="numerocliente">Nº Cliente: </label>
+                <input id="numerocliente" type="text"><br/>
+
+                <label for="nomecliente">Nome do Cliente: </label>
+                <input id="nomecliente" type="text"><br/>
+
+                <label for="nif">NIF: </label>
+                <input id="nif" type="text"><br/>
+
+                <label for="morada">Morada: </label>
+                <input id="morada" type="text"><br/>
+
+                <label for="cpostal">C. Postal: </label>
+                <input id="cpostal" type="text"><br/>
+
+                <label for="telefone">Telefone: </label>
+                <input id="telefone" type="text"><br/>
+
+                <label for="email">e-mail: </label>
+                <input id="email" type="text"><br/><br/>
+                <button type="button" onclick="guardar($('#numerocliente').val(),$('#nomecliente').val(),$('#nif').val(),$('#morada').val(),$('#cpostal').val(),$('#telefone').val(),$('#email').val());">Guardar</button>&nbsp;
+                <button type="button" onclick="apagar2($('#numerocliente').val());">Apagar</button>&nbsp;
+                <button type="button" onclick="voltar();">Voltar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
