@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="jquery/jquery-3.6.0.js"></script>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap-grid.css">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap-reboot.css">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+        <script type="text/javascript" src="bootstrap/js/bootstrap.bundle.js"></script>
+        <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+        <link rel="shortcut icon" type="image/jpg" href="images/Icon.jpg"/>
+        <link rel="stylesheet" href="css/clientes.css">
+        <script type="text/javascript" src="js/clientes.js"></script>
+        <link rel="stylesheet" href="css/navbars.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container-fluid bg-dark">
+            <div class="container">
+                <nav class="navbar navbar-expand-sm navbar-dark">
+                    <a class="navbar-brand" href="dashboardprincipal.html">
+                        <img src="images/Logo.png" alt="logo" style="height:40px;">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="dashboardprincipal.html">Início</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="quemsomos.html">Quem somos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="montraprodutos.html">Produtos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="montraservicos.html">Serviços</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contactos.html">Contactos</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <form class="form-inline" action="/pesquisa" method="get">
+                        <input type="text" class="form-control mt-1" style="height:40px;width:80%" placeholder="Pesquisar">
+                        &nbsp;
+                        <button type="submit" class="btn bg-whitenote" style="width:40px;height:40px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                            </svg>
+                        </button>
+                    </form>
+                    <div class="dropdown show">
+                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+                            <img src="images/foto1.png" style="width:40px;height:40px;border-radius:5px;">
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#">Perfil</a>
+                            <a class="dropdown-item" href="#">Configurações</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Sair</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="container mt-4">
+            <h1 class="display-4">Clientes</h1>
+        </div>
+        <div class="container">
+            <table class="table table-dark table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Nº Cliente</th>
+                        <th>Nome</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <button class="btn bg-whitenote" type="button" onclick="adicionar();" style="width:40px;height:40px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-plus" viewBox="4 2 14 14">
+                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                </svg>
+            </button>
+        </div>
+        
+        <div id="formArea">
+            <div id="formContainer">
+                <form>
+                    <label for="numerocliente">Nº Cliente: </label>
+                    <input id="numerocliente" type="text"><br/>
+
+                    <label for="nomecliente">Nome do Cliente: </label>
+                    <input id="nomecliente" type="text"><br/>
+
+                    <label for="nif">NIF: </label>
+                    <input id="nif" type="text"><br/>
+
+                    <label for="morada">Morada: </label>
+                    <input id="morada" type="text"><br/>
+
+                    <label for="cpostal">C. Postal: </label>
+                    <input id="cpostal" type="text"><br/>
+
+                    <label for="telefone">Telefone: </label>
+                    <input id="telefone" type="text"><br/>
+
+                    <label for="email">e-mail: </label>
+                    <input id="email" type="text"><br/><br/>
+                    <button type="button" onclick="guardar($('#numerocliente').val(),$('#nomecliente').val(),$('#nif').val(),$('#morada').val(),$('#cpostal').val(),$('#telefone').val(),$('#email').val());">Guardar</button>&nbsp;
+                    <button type="button" onclick="apagar2($('#numerocliente').val());">Apagar</button>&nbsp;
+                    <button type="button" onclick="voltar();">Voltar</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
